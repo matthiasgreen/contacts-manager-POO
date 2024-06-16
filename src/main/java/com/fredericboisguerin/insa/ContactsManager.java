@@ -10,7 +10,7 @@ public class ContactsManager {
         if (name == null || name.isEmpty()) {
             throw new InvalidContactNameException();
         }
-        if (email == null || !email.contains("@")) {
+        if (email != null && !email.contains("@")) {
             throw new InvalidEmailException();
         }
         Contact contact = new Contact(name, email, phoneNumber);
